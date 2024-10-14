@@ -57,6 +57,8 @@ namespace ViseFormi
                         {
                             writer.WriteLine(item.ToString());
                         }
+
+                        MessageBox.Show("Datoteka spremljena!");
                     }
                 }
             }
@@ -74,6 +76,8 @@ namespace ViseFormi
                     listBoxStudenti.Items.Clear();
                     string[] lines = File.ReadAllLines(openFileDialog.FileName);
                     listBoxStudenti.Items.AddRange(lines);
+
+                    MessageBox.Show("Datoteka učitana!");
                 }
             }
         }
