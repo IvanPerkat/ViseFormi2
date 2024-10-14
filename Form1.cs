@@ -16,5 +16,29 @@ namespace ViseFormi
         {
             InitializeComponent();
         }
+
+        private void buttonDodaj_Click(object sender, EventArgs e)
+        {
+            Form2 student = new Form2();
+            DialogResult rez = student.ShowDialog();
+
+            if (rez == DialogResult.OK)
+            {
+                listBoxStudenti.Items.Add(student.student.ToString());
+            }
+        }
+
+        private void buttonObrisiStudenta_Click(object sender, EventArgs e)
+        {
+            if (listBoxStudenti.SelectedItems != null)
+            {
+                listBoxStudenti.Items.Remove(listBoxStudenti.SelectedItem);
+            }
+        }
+
+        private void buttonObrisiSve_Click(object sender, EventArgs e)
+        {
+            listBoxStudenti.Items.Clear();
+        }
     }
 }
