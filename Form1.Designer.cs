@@ -32,6 +32,8 @@
             this.buttonObrisiStudenta = new System.Windows.Forms.Button();
             this.buttonObrisiSve = new System.Windows.Forms.Button();
             this.listBoxStudenti = new System.Windows.Forms.ListBox();
+            this.buttonSpremi = new System.Windows.Forms.Button();
+            this.buttonCitaj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonDodaj
@@ -72,11 +74,33 @@
             this.listBoxStudenti.Size = new System.Drawing.Size(307, 134);
             this.listBoxStudenti.TabIndex = 3;
             // 
+            // buttonSpremi
+            // 
+            this.buttonSpremi.Location = new System.Drawing.Point(128, 181);
+            this.buttonSpremi.Name = "buttonSpremi";
+            this.buttonSpremi.Size = new System.Drawing.Size(75, 23);
+            this.buttonSpremi.TabIndex = 4;
+            this.buttonSpremi.Text = "Spremi";
+            this.buttonSpremi.UseVisualStyleBackColor = true;
+            this.buttonSpremi.Click += new System.EventHandler(this.buttonSpremi_Click);
+            // 
+            // buttonCitaj
+            // 
+            this.buttonCitaj.Location = new System.Drawing.Point(244, 181);
+            this.buttonCitaj.Name = "buttonCitaj";
+            this.buttonCitaj.Size = new System.Drawing.Size(75, 23);
+            this.buttonCitaj.TabIndex = 6;
+            this.buttonCitaj.Text = "Čitaj";
+            this.buttonCitaj.UseVisualStyleBackColor = true;
+            this.buttonCitaj.Click += new System.EventHandler(this.buttonCitaj_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 219);
+            this.Controls.Add(this.buttonCitaj);
+            this.Controls.Add(this.buttonSpremi);
             this.Controls.Add(this.listBoxStudenti);
             this.Controls.Add(this.buttonObrisiSve);
             this.Controls.Add(this.buttonObrisiStudenta);
@@ -93,6 +117,8 @@
         private System.Windows.Forms.Button buttonObrisiStudenta;
         private System.Windows.Forms.Button buttonObrisiSve;
         private System.Windows.Forms.ListBox listBoxStudenti;
+        private System.Windows.Forms.Button buttonSpremi;
+        private System.Windows.Forms.Button buttonCitaj;
     }
 }
 
