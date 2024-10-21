@@ -13,19 +13,21 @@ namespace ViseFormi
         private string brojIndeksa;
         private string smjer;
         private DateTime datumRodenja;
+        private string studij;
 
-        public Class1(string ime, string prezime, string brojIndeksa, string smjer, DateTime datumRodenja)
+        public Class1(string ime, string prezime, string brojIndeksa, string smjer, DateTime datumRodenja, string studij)
         {
             this.ime = ime;
             this.prezime = prezime;
             this.brojIndeksa = brojIndeksa;
             this.smjer = smjer;
             this.datumRodenja = datumRodenja;
+            this.studij = studij;
         }
 
         public override string ToString()
         {
-            return $"{ime} {prezime} | {smjer} | {brojIndeksa} | {datumRodenja.ToShortDateString()}";
+            return $"{ime} {prezime} | {smjer} | {studij} | {brojIndeksa} | {datumRodenja.ToShortDateString()}";
         }
     }
 }
