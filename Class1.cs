@@ -27,7 +27,7 @@ namespace ViseFormi
 
         public override string ToString()
         {
-            return $"{ime} {prezime} | {smjer} | {studij} | {brojIndeksa} | {datumRodenja.ToShortDateString()}";
+            return $"{ime} {prezime} | {smjer} | {studij.Substring(0, 1)} | {brojIndeksa} | {datumRodenja.ToShortDateString()}";
         }
     }
 }

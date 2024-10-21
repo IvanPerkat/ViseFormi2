@@ -25,26 +25,14 @@ namespace ViseFormi
 
         private void buttonSnimi_Click(object sender, EventArgs e)
         {
-            string studij = "";
-
-            if (radioButtonStudijRedovni.Checked)
-            {
-                studij = "R";
-            }
-
-            else
-            {
-                studij = "I";
-            }
-
             student = new Class1(
                 textBoxIme.Text,
                 textBoxPrezime.Text,
                 textBoxIndeks.Text,
                 comboBoxSmjer.SelectedItem.ToString(),
                 dateTimePickerDatumRodjenja.Value,
-                studij
-            );
+                groupBoxVrstaStudija.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text
+            ); 
 
             DialogResult = DialogResult.OK;
             Close();
