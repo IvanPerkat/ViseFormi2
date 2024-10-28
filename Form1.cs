@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ViseFormi
 {
     public partial class Form1 : Form
     {
+        DateTime pocetno = DateTime.Now;
+
         public Form1()
         {
             InitializeComponent();
+            timer1.Tick += timer1_Tick;
         }
 
         private void buttonDodaj_Click(object sender, EventArgs e)
@@ -53,7 +49,7 @@ namespace ViseFormi
                 {
                     using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
                     {
-                        foreach (var item in listBoxStudenti.Items) 
+                        foreach (var item in listBoxStudenti.Items)
                         {
                             writer.WriteLine(item.ToString());
                         }
@@ -80,6 +76,14 @@ namespace ViseFormi
                     MessageBox.Show("Datoteka učitana!");
                 }
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = $"Trenutno: {DateTime.Now.ToLongTimeString()}";
+
+            TimeSpan proteklo = DateTime.Now - pocetno;
+            toolStripStatusLabel2.Text = "Proteklo: " + proteklo.Hours.ToString("D2") + ":" + proteklo.Minutes.ToString("D2") + ":" + proteklo.Seconds.ToString("D2");
         }
     }
 }
