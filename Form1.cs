@@ -27,16 +27,57 @@ namespace ViseFormi
 
         private void buttonObrisiStudenta_Click(object sender, EventArgs e)
         {
-            if (listBoxStudenti.SelectedItems != null)
+            if (listBoxStudenti.Items.Count > 0)
             {
-                listBoxStudenti.Items.Remove(listBoxStudenti.SelectedItem);
+                string message = "Obriši studenta?";
+                string caption = "Jeste li sigurni da želite obrisati studenta?";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+                DialogResult result = MessageBox.Show(caption, message, buttons, MessageBoxIcon.Warning);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        if (listBoxStudenti.SelectedItems != null)
+                        {
+                            listBoxStudenti.Items.Remove(listBoxStudenti.SelectedItem);
+                        }
+                        break;
+                    case DialogResult.No:
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nema studenta za brisanje.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void buttonObrisiSve_Click(object sender, EventArgs e)
         {
-            listBoxStudenti.Items.Clear();
+            if (listBoxStudenti.Items.Count > 0)
+            {
+                string message = "Obriši sve?";
+                string caption = "Jeste li sigurni da želite obrisati sve studente?";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+                DialogResult result = MessageBox.Show(caption, message, buttons, MessageBoxIcon.Warning);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        listBoxStudenti.Items.Clear();
+                        break;
+                    case DialogResult.No:
+                        break; 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nema studenata za brisanje.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void buttonSpremi_Click(object sender, EventArgs e)
         {

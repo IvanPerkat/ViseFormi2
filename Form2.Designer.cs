@@ -199,7 +199,7 @@
             this.toolStripStatusLabel2});
             this.statusStripVrijeme.Location = new System.Drawing.Point(0, 320);
             this.statusStripVrijeme.Name = "statusStripVrijeme";
-            this.statusStripVrijeme.Size = new System.Drawing.Size(476, 22);
+            this.statusStripVrijeme.Size = new System.Drawing.Size(452, 22);
             this.statusStripVrijeme.TabIndex = 15;
             this.statusStripVrijeme.Text = "statusStrip1";
             // 
@@ -227,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(476, 342);
+            this.ClientSize = new System.Drawing.Size(452, 342);
             this.Controls.Add(this.statusStripVrijeme);
             this.Controls.Add(this.groupBoxVrstaStudija);
             this.Controls.Add(this.label3);

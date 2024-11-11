@@ -39,8 +39,21 @@ namespace ViseFormi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
-            Close();
+            string message = "Otkaži promjene?";
+            string caption = "Jeste li sigurni da želite otkazati promjene?";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Warning);
+
+            switch (result)
+            {
+                case DialogResult.Yes:
+                    DialogResult = DialogResult.Cancel;
+                    Close();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
