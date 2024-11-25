@@ -48,11 +48,17 @@
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porukeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oAplikacijiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxOtvori = new System.Windows.Forms.GroupBox();
+            this.buttonChrome = new System.Windows.Forms.Button();
+            this.buttonWord = new System.Windows.Forms.Button();
+            this.buttonExcel = new System.Windows.Forms.Button();
+            this.buttonStartInfo = new System.Windows.Forms.Button();
             this.statusStripVrijeme.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBoxOtvori.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonDodaj
@@ -67,7 +73,7 @@
             // 
             // buttonObrisiStudenta
             // 
-            this.buttonObrisiStudenta.Location = new System.Drawing.Point(335, 119);
+            this.buttonObrisiStudenta.Location = new System.Drawing.Point(333, 63);
             this.buttonObrisiStudenta.Name = "buttonObrisiStudenta";
             this.buttonObrisiStudenta.Size = new System.Drawing.Size(97, 23);
             this.buttonObrisiStudenta.TabIndex = 1;
@@ -120,7 +126,7 @@
             this.toolStripStatusLabel2});
             this.statusStripVrijeme.Location = new System.Drawing.Point(0, 241);
             this.statusStripVrijeme.Name = "statusStripVrijeme";
-            this.statusStripVrijeme.Size = new System.Drawing.Size(454, 22);
+            this.statusStripVrijeme.Size = new System.Drawing.Size(557, 22);
             this.statusStripVrijeme.TabIndex = 7;
             this.statusStripVrijeme.Text = "statusStrip1";
             // 
@@ -152,7 +158,7 @@
             this.messageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(454, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(557, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,21 +175,21 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.openToolStripMenuItem.Text = "Otvori";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.saveToolStripMenuItem.Text = "Spremi";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.exitToolStripMenuItem.Text = "Izađi";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -199,14 +205,14 @@
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.optionsToolStripMenuItem.Text = "Opcije";
             // 
             // viewToolStripMenuItem
@@ -217,6 +223,12 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.viewToolStripMenuItem.Text = "Pregled";
             // 
+            // porukeToolStripMenuItem
+            // 
+            this.porukeToolStripMenuItem.Name = "porukeToolStripMenuItem";
+            this.porukeToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.porukeToolStripMenuItem.Text = "Poruka";
+            // 
             // messageToolStripMenuItem
             // 
             this.messageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -225,24 +237,71 @@
             this.messageToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.messageToolStripMenuItem.Text = "Pmoć";
             // 
-            // porukeToolStripMenuItem
-            // 
-            this.porukeToolStripMenuItem.Name = "porukeToolStripMenuItem";
-            this.porukeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.porukeToolStripMenuItem.Text = "Poruka";
-            // 
             // oAplikacijiToolStripMenuItem
             // 
             this.oAplikacijiToolStripMenuItem.Name = "oAplikacijiToolStripMenuItem";
-            this.oAplikacijiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.oAplikacijiToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.oAplikacijiToolStripMenuItem.Text = "O aplikaciji";
+            // 
+            // groupBoxOtvori
+            // 
+            this.groupBoxOtvori.Controls.Add(this.buttonStartInfo);
+            this.groupBoxOtvori.Controls.Add(this.buttonExcel);
+            this.groupBoxOtvori.Controls.Add(this.buttonWord);
+            this.groupBoxOtvori.Controls.Add(this.buttonChrome);
+            this.groupBoxOtvori.Location = new System.Drawing.Point(333, 104);
+            this.groupBoxOtvori.Name = "groupBoxOtvori";
+            this.groupBoxOtvori.Size = new System.Drawing.Size(200, 93);
+            this.groupBoxOtvori.TabIndex = 9;
+            this.groupBoxOtvori.TabStop = false;
+            // 
+            // buttonChrome
+            // 
+            this.buttonChrome.Location = new System.Drawing.Point(6, 19);
+            this.buttonChrome.Name = "buttonChrome";
+            this.buttonChrome.Size = new System.Drawing.Size(91, 23);
+            this.buttonChrome.TabIndex = 0;
+            this.buttonChrome.Text = "Chrome";
+            this.buttonChrome.UseVisualStyleBackColor = true;
+            this.buttonChrome.Click += new System.EventHandler(this.buttonChrome_Click);
+            // 
+            // buttonWord
+            // 
+            this.buttonWord.Location = new System.Drawing.Point(103, 19);
+            this.buttonWord.Name = "buttonWord";
+            this.buttonWord.Size = new System.Drawing.Size(91, 23);
+            this.buttonWord.TabIndex = 1;
+            this.buttonWord.Text = "Word";
+            this.buttonWord.UseVisualStyleBackColor = true;
+            this.buttonWord.Click += new System.EventHandler(this.buttonWord_Click);
+            // 
+            // buttonExcel
+            // 
+            this.buttonExcel.Location = new System.Drawing.Point(6, 61);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(91, 23);
+            this.buttonExcel.TabIndex = 2;
+            this.buttonExcel.Text = "Excel";
+            this.buttonExcel.UseVisualStyleBackColor = true;
+            this.buttonExcel.Click += new System.EventHandler(this.buttonExcele_Click);
+            // 
+            // buttonStartInfo
+            // 
+            this.buttonStartInfo.Location = new System.Drawing.Point(103, 61);
+            this.buttonStartInfo.Name = "buttonStartInfo";
+            this.buttonStartInfo.Size = new System.Drawing.Size(91, 23);
+            this.buttonStartInfo.TabIndex = 3;
+            this.buttonStartInfo.Text = "Start Info";
+            this.buttonStartInfo.UseVisualStyleBackColor = true;
+            this.buttonStartInfo.Click += new System.EventHandler(this.buttonStartInfo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(454, 263);
+            this.ClientSize = new System.Drawing.Size(557, 263);
+            this.Controls.Add(this.groupBoxOtvori);
             this.Controls.Add(this.statusStripVrijeme);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.buttonCitaj);
@@ -258,6 +317,7 @@
             this.statusStripVrijeme.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBoxOtvori.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +347,11 @@
         private System.Windows.Forms.ToolStripMenuItem messageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porukeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oAplikacijiToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBoxOtvori;
+        private System.Windows.Forms.Button buttonStartInfo;
+        private System.Windows.Forms.Button buttonExcel;
+        private System.Windows.Forms.Button buttonWord;
+        private System.Windows.Forms.Button buttonChrome;
     }
 }
 

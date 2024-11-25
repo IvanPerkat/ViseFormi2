@@ -29,15 +29,9 @@ namespace ViseFormi
             comboBoxBoja.Items.Add("Crvena");
         }
 
-        public Class2 font {  get; set; }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            font = new Class2(
-                comboBoxVrsta.SelectedItem.ToString(),
-                comboBoxBoja.SelectedItem.ToString(),
-                (int)comboBoxVelicina.SelectedItem
-                );
+
         }
 
         private void button1_Click(object sender, EventArgs e)

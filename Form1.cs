@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ViseFormi
 {
@@ -194,6 +195,36 @@ namespace ViseFormi
             {
                 
             }
+        }
+
+        private void buttonChrome_Click(object sender, EventArgs e)
+        {
+            Process.Start("chrome.exe");
+        }
+
+        private void buttonWord_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE";
+
+            Process.Start(path);
+        }
+
+        private void buttonExcele_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE";
+
+            Process.Start(path);
+        }
+
+        private void buttonStartInfo_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo("chrome.exe");
+
+            startInfo.WindowStyle = ProcessWindowStyle.Normal;
+
+            startInfo.Arguments = "https://eu.wargaming.net/shop/wot/vehicles/";
+
+            Process.Start(startInfo);
         }
     }
 }
