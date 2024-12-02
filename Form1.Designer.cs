@@ -56,8 +56,8 @@
             this.buttonExcel = new System.Windows.Forms.Button();
             this.buttonWord = new System.Windows.Forms.Button();
             this.buttonChrome = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.buttonOdaberiTermin = new System.Windows.Forms.Button();
+            this.buttonUpišiIzostanak = new System.Windows.Forms.Button();
+            this.buttonPrikaziIzostanke = new System.Windows.Forms.Button();
             this.statusStripVrijeme.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxOtvori.SuspendLayout();
@@ -251,7 +251,7 @@
             this.groupBoxOtvori.Controls.Add(this.buttonExcel);
             this.groupBoxOtvori.Controls.Add(this.buttonWord);
             this.groupBoxOtvori.Controls.Add(this.buttonChrome);
-            this.groupBoxOtvori.Location = new System.Drawing.Point(344, 34);
+            this.groupBoxOtvori.Location = new System.Drawing.Point(343, 62);
             this.groupBoxOtvori.Name = "groupBoxOtvori";
             this.groupBoxOtvori.Size = new System.Drawing.Size(200, 93);
             this.groupBoxOtvori.TabIndex = 9;
@@ -297,22 +297,24 @@
             this.buttonChrome.UseVisualStyleBackColor = true;
             this.buttonChrome.Click += new System.EventHandler(this.buttonChrome_Click);
             // 
-            // monthCalendar1
+            // buttonUpišiIzostanak
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(344, 139);
-            this.monthCalendar1.MaxSelectionCount = 31;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
+            this.buttonUpišiIzostanak.Location = new System.Drawing.Point(446, 161);
+            this.buttonUpišiIzostanak.Name = "buttonUpišiIzostanak";
+            this.buttonUpišiIzostanak.Size = new System.Drawing.Size(91, 23);
+            this.buttonUpišiIzostanak.TabIndex = 10;
+            this.buttonUpišiIzostanak.Text = "Upiši izostanak";
+            this.buttonUpišiIzostanak.UseVisualStyleBackColor = true;
+            this.buttonUpišiIzostanak.Click += new System.EventHandler(this.buttonUpišiIzostanak_Click);
             // 
-            // buttonOdaberiTermin
+            // buttonPrikaziIzostanke
             // 
-            this.buttonOdaberiTermin.Location = new System.Drawing.Point(447, 320);
-            this.buttonOdaberiTermin.Name = "buttonOdaberiTermin";
-            this.buttonOdaberiTermin.Size = new System.Drawing.Size(91, 23);
-            this.buttonOdaberiTermin.TabIndex = 10;
-            this.buttonOdaberiTermin.Text = "Odaberi termin";
-            this.buttonOdaberiTermin.UseVisualStyleBackColor = true;
-            this.buttonOdaberiTermin.Click += new System.EventHandler(this.buttonOdaberiTermin_Click);
+            this.buttonPrikaziIzostanke.Location = new System.Drawing.Point(343, 161);
+            this.buttonPrikaziIzostanke.Name = "buttonPrikaziIzostanke";
+            this.buttonPrikaziIzostanke.Size = new System.Drawing.Size(97, 23);
+            this.buttonPrikaziIzostanke.TabIndex = 11;
+            this.buttonPrikaziIzostanke.Text = "Prikaži izostanke";
+            this.buttonPrikaziIzostanke.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -320,8 +322,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(555, 384);
-            this.Controls.Add(this.buttonOdaberiTermin);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.buttonPrikaziIzostanke);
+            this.Controls.Add(this.buttonUpišiIzostanak);
             this.Controls.Add(this.groupBoxOtvori);
             this.Controls.Add(this.statusStripVrijeme);
             this.Controls.Add(this.menuStrip1);
@@ -373,8 +375,8 @@
         private System.Windows.Forms.Button buttonExcel;
         private System.Windows.Forms.Button buttonWord;
         private System.Windows.Forms.Button buttonChrome;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button buttonOdaberiTermin;
+        private System.Windows.Forms.Button buttonUpišiIzostanak;
+        private System.Windows.Forms.Button buttonPrikaziIzostanke;
     }
 }
 

@@ -9,6 +9,7 @@ namespace ViseFormi
     public partial class Form1 : Form
     {
         DateTime pocetno = DateTime.Now;
+        string izostanciFilePath = "C:\\Users\\ucenik\\Downloads";
 
         public Form1()
         {
@@ -228,18 +229,22 @@ namespace ViseFormi
             Process.Start(startInfo);
         }
 
-        private void buttonOdaberiTermin_Click(object sender, EventArgs e)
+        private void buttonUpišiIzostanak_Click(object sender, EventArgs e)
         {
-            TimeSpan timeSpan = monthCalendar1.SelectionEnd - monthCalendar1.SelectionStart;
+            Form4 upisiIzostanak = new Form4();
 
-            if (timeSpan.Days < 1)
-            {
-                MessageBox.Show("Korištenjem tipkom SHIFT odaberite opseg datuma");
-            }
+            upisiIzostanak.Izostanci += PrikaziIzostanak;
 
-            MessageBox.Show("Rezervirali ste usluge u trajanju od " + timeSpan.Days.ToString() + " dana.", "Rezervacija");
+            DialogResult result = upisiIzostanak.ShowDialog();
+        }
 
-            MessageBox.Show("Vaša rezervacija počinje " + monthCalendar1.SelectionStart.ToShortDateString() + " a završava se " + monthCalendar1.SelectionEnd.ToShortDateString());
+        private void PrikaziIzostanak(string izostanak)
+        {
+            File.AppendAllText(izostanciFilePath, izostanak + Environment.NewLine);
+
+            MessageBox.Show("Izostanak je zabilježen!");
+
+            Process.Start("notepad.exe", izostanciFilePath);
         }
     }
 }
