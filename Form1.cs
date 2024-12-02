@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Security.Policy;
 
 namespace ViseFormi
 {
@@ -225,6 +226,20 @@ namespace ViseFormi
             startInfo.Arguments = "https://eu.wargaming.net/shop/wot/vehicles/";
 
             Process.Start(startInfo);
+        }
+
+        private void buttonOdaberiTermin_Click(object sender, EventArgs e)
+        {
+            TimeSpan timeSpan = monthCalendar1.SelectionEnd - monthCalendar1.SelectionStart;
+
+            if (timeSpan.Days < 1)
+            {
+                MessageBox.Show("Korištenjem tipkom SHIFT odaberite opseg datuma");
+            }
+
+            MessageBox.Show("Rezervirali ste usluge u trajanju od " + timeSpan.Days.ToString() + " dana.", "Rezervacija");
+
+            MessageBox.Show("Vaša rezervacija počinje " + monthCalendar1.SelectionStart.ToShortDateString() + " a završava se " + monthCalendar1.SelectionEnd.ToShortDateString());
         }
     }
 }

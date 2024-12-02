@@ -52,10 +52,12 @@
             this.messageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oAplikacijiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxOtvori = new System.Windows.Forms.GroupBox();
-            this.buttonChrome = new System.Windows.Forms.Button();
-            this.buttonWord = new System.Windows.Forms.Button();
-            this.buttonExcel = new System.Windows.Forms.Button();
             this.buttonStartInfo = new System.Windows.Forms.Button();
+            this.buttonExcel = new System.Windows.Forms.Button();
+            this.buttonWord = new System.Windows.Forms.Button();
+            this.buttonChrome = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.buttonOdaberiTermin = new System.Windows.Forms.Button();
             this.statusStripVrijeme.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxOtvori.SuspendLayout();
@@ -73,7 +75,7 @@
             // 
             // buttonObrisiStudenta
             // 
-            this.buttonObrisiStudenta.Location = new System.Drawing.Point(333, 63);
+            this.buttonObrisiStudenta.Location = new System.Drawing.Point(219, 34);
             this.buttonObrisiStudenta.Name = "buttonObrisiStudenta";
             this.buttonObrisiStudenta.Size = new System.Drawing.Size(97, 23);
             this.buttonObrisiStudenta.TabIndex = 1;
@@ -83,7 +85,7 @@
             // 
             // buttonObrisiSve
             // 
-            this.buttonObrisiSve.Location = new System.Drawing.Point(9, 203);
+            this.buttonObrisiSve.Location = new System.Drawing.Point(9, 320);
             this.buttonObrisiSve.Name = "buttonObrisiSve";
             this.buttonObrisiSve.Size = new System.Drawing.Size(75, 23);
             this.buttonObrisiSve.TabIndex = 2;
@@ -94,14 +96,14 @@
             // listBoxStudenti
             // 
             this.listBoxStudenti.FormattingEnabled = true;
-            this.listBoxStudenti.Location = new System.Drawing.Point(9, 63);
+            this.listBoxStudenti.Location = new System.Drawing.Point(9, 62);
             this.listBoxStudenti.Name = "listBoxStudenti";
-            this.listBoxStudenti.Size = new System.Drawing.Size(307, 134);
+            this.listBoxStudenti.Size = new System.Drawing.Size(307, 238);
             this.listBoxStudenti.TabIndex = 3;
             // 
             // buttonSpremi
             // 
-            this.buttonSpremi.Location = new System.Drawing.Point(125, 203);
+            this.buttonSpremi.Location = new System.Drawing.Point(125, 320);
             this.buttonSpremi.Name = "buttonSpremi";
             this.buttonSpremi.Size = new System.Drawing.Size(75, 23);
             this.buttonSpremi.TabIndex = 4;
@@ -111,7 +113,7 @@
             // 
             // buttonCitaj
             // 
-            this.buttonCitaj.Location = new System.Drawing.Point(241, 203);
+            this.buttonCitaj.Location = new System.Drawing.Point(241, 320);
             this.buttonCitaj.Name = "buttonCitaj";
             this.buttonCitaj.Size = new System.Drawing.Size(75, 23);
             this.buttonCitaj.TabIndex = 6;
@@ -124,9 +126,9 @@
             this.statusStripVrijeme.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStripVrijeme.Location = new System.Drawing.Point(0, 241);
+            this.statusStripVrijeme.Location = new System.Drawing.Point(0, 362);
             this.statusStripVrijeme.Name = "statusStripVrijeme";
-            this.statusStripVrijeme.Size = new System.Drawing.Size(557, 22);
+            this.statusStripVrijeme.Size = new System.Drawing.Size(555, 22);
             this.statusStripVrijeme.TabIndex = 7;
             this.statusStripVrijeme.Text = "statusStrip1";
             // 
@@ -158,7 +160,7 @@
             this.messageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(557, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(555, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -249,41 +251,11 @@
             this.groupBoxOtvori.Controls.Add(this.buttonExcel);
             this.groupBoxOtvori.Controls.Add(this.buttonWord);
             this.groupBoxOtvori.Controls.Add(this.buttonChrome);
-            this.groupBoxOtvori.Location = new System.Drawing.Point(333, 104);
+            this.groupBoxOtvori.Location = new System.Drawing.Point(344, 34);
             this.groupBoxOtvori.Name = "groupBoxOtvori";
             this.groupBoxOtvori.Size = new System.Drawing.Size(200, 93);
             this.groupBoxOtvori.TabIndex = 9;
             this.groupBoxOtvori.TabStop = false;
-            // 
-            // buttonChrome
-            // 
-            this.buttonChrome.Location = new System.Drawing.Point(6, 19);
-            this.buttonChrome.Name = "buttonChrome";
-            this.buttonChrome.Size = new System.Drawing.Size(91, 23);
-            this.buttonChrome.TabIndex = 0;
-            this.buttonChrome.Text = "Chrome";
-            this.buttonChrome.UseVisualStyleBackColor = true;
-            this.buttonChrome.Click += new System.EventHandler(this.buttonChrome_Click);
-            // 
-            // buttonWord
-            // 
-            this.buttonWord.Location = new System.Drawing.Point(103, 19);
-            this.buttonWord.Name = "buttonWord";
-            this.buttonWord.Size = new System.Drawing.Size(91, 23);
-            this.buttonWord.TabIndex = 1;
-            this.buttonWord.Text = "Word";
-            this.buttonWord.UseVisualStyleBackColor = true;
-            this.buttonWord.Click += new System.EventHandler(this.buttonWord_Click);
-            // 
-            // buttonExcel
-            // 
-            this.buttonExcel.Location = new System.Drawing.Point(6, 61);
-            this.buttonExcel.Name = "buttonExcel";
-            this.buttonExcel.Size = new System.Drawing.Size(91, 23);
-            this.buttonExcel.TabIndex = 2;
-            this.buttonExcel.Text = "Excel";
-            this.buttonExcel.UseVisualStyleBackColor = true;
-            this.buttonExcel.Click += new System.EventHandler(this.buttonExcele_Click);
             // 
             // buttonStartInfo
             // 
@@ -295,12 +267,61 @@
             this.buttonStartInfo.UseVisualStyleBackColor = true;
             this.buttonStartInfo.Click += new System.EventHandler(this.buttonStartInfo_Click);
             // 
+            // buttonExcel
+            // 
+            this.buttonExcel.Location = new System.Drawing.Point(6, 61);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(91, 23);
+            this.buttonExcel.TabIndex = 2;
+            this.buttonExcel.Text = "Excel";
+            this.buttonExcel.UseVisualStyleBackColor = true;
+            this.buttonExcel.Click += new System.EventHandler(this.buttonExcele_Click);
+            // 
+            // buttonWord
+            // 
+            this.buttonWord.Location = new System.Drawing.Point(103, 19);
+            this.buttonWord.Name = "buttonWord";
+            this.buttonWord.Size = new System.Drawing.Size(91, 23);
+            this.buttonWord.TabIndex = 1;
+            this.buttonWord.Text = "Word";
+            this.buttonWord.UseVisualStyleBackColor = true;
+            this.buttonWord.Click += new System.EventHandler(this.buttonWord_Click);
+            // 
+            // buttonChrome
+            // 
+            this.buttonChrome.Location = new System.Drawing.Point(6, 19);
+            this.buttonChrome.Name = "buttonChrome";
+            this.buttonChrome.Size = new System.Drawing.Size(91, 23);
+            this.buttonChrome.TabIndex = 0;
+            this.buttonChrome.Text = "Chrome";
+            this.buttonChrome.UseVisualStyleBackColor = true;
+            this.buttonChrome.Click += new System.EventHandler(this.buttonChrome_Click);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(344, 139);
+            this.monthCalendar1.MaxSelectionCount = 31;
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 4;
+            // 
+            // buttonOdaberiTermin
+            // 
+            this.buttonOdaberiTermin.Location = new System.Drawing.Point(447, 320);
+            this.buttonOdaberiTermin.Name = "buttonOdaberiTermin";
+            this.buttonOdaberiTermin.Size = new System.Drawing.Size(91, 23);
+            this.buttonOdaberiTermin.TabIndex = 10;
+            this.buttonOdaberiTermin.Text = "Odaberi termin";
+            this.buttonOdaberiTermin.UseVisualStyleBackColor = true;
+            this.buttonOdaberiTermin.Click += new System.EventHandler(this.buttonOdaberiTermin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(557, 263);
+            this.ClientSize = new System.Drawing.Size(555, 384);
+            this.Controls.Add(this.buttonOdaberiTermin);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.groupBoxOtvori);
             this.Controls.Add(this.statusStripVrijeme);
             this.Controls.Add(this.menuStrip1);
@@ -352,6 +373,8 @@
         private System.Windows.Forms.Button buttonExcel;
         private System.Windows.Forms.Button buttonWord;
         private System.Windows.Forms.Button buttonChrome;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Button buttonOdaberiTermin;
     }
 }
 
