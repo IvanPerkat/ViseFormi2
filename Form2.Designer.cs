@@ -48,8 +48,12 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxGodina = new System.Windows.Forms.TextBox();
             this.groupBoxVrstaStudija.SuspendLayout();
             this.statusStripVrijeme.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +124,7 @@
             // 
             // buttonSnimi
             // 
-            this.buttonSnimi.Location = new System.Drawing.Point(66, 283);
+            this.buttonSnimi.Location = new System.Drawing.Point(71, 354);
             this.buttonSnimi.Name = "buttonSnimi";
             this.buttonSnimi.Size = new System.Drawing.Size(75, 23);
             this.buttonSnimi.TabIndex = 10;
@@ -130,7 +134,7 @@
             // 
             // buttonOtkazi
             // 
-            this.buttonOtkazi.Location = new System.Drawing.Point(280, 283);
+            this.buttonOtkazi.Location = new System.Drawing.Point(285, 354);
             this.buttonOtkazi.Name = "buttonOtkazi";
             this.buttonOtkazi.Size = new System.Drawing.Size(75, 23);
             this.buttonOtkazi.TabIndex = 11;
@@ -197,7 +201,7 @@
             this.statusStripVrijeme.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStripVrijeme.Location = new System.Drawing.Point(0, 321);
+            this.statusStripVrijeme.Location = new System.Drawing.Point(0, 390);
             this.statusStripVrijeme.Name = "statusStripVrijeme";
             this.statusStripVrijeme.Size = new System.Drawing.Size(452, 22);
             this.statusStripVrijeme.TabIndex = 15;
@@ -222,12 +226,40 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(39, 274);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(107, 45);
+            this.trackBar1.TabIndex = 16;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(36, 255);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Godina";
+            // 
+            // textBoxGodina
+            // 
+            this.textBoxGodina.Location = new System.Drawing.Point(152, 274);
+            this.textBoxGodina.Name = "textBoxGodina";
+            this.textBoxGodina.Size = new System.Drawing.Size(26, 20);
+            this.textBoxGodina.TabIndex = 18;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(452, 343);
+            this.ClientSize = new System.Drawing.Size(452, 412);
+            this.Controls.Add(this.textBoxGodina);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.statusStripVrijeme);
             this.Controls.Add(this.groupBoxVrstaStudija);
             this.Controls.Add(this.label3);
@@ -248,6 +280,7 @@
             this.groupBoxVrstaStudija.PerformLayout();
             this.statusStripVrijeme.ResumeLayout(false);
             this.statusStripVrijeme.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +307,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxGodina;
     }
 }

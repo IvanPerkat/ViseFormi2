@@ -18,6 +18,9 @@ namespace ViseFormi
             comboBoxSmjer.Items.Add("Mrežni administrator");
 
             timer1.Tick += timer1_Tick;
+
+            trackBar1.Minimum = 1;
+            trackBar1.Maximum = 5;
         }
 
         public Class1 student { get; set; }
@@ -30,7 +33,8 @@ namespace ViseFormi
                 textBoxIndeks.Text,
                 comboBoxSmjer.SelectedItem.ToString(),
                 dateTimePickerDatumRodjenja.Value,
-                groupBoxVrstaStudija.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked)?.Text
+                groupBoxVrstaStudija.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked)?.Text,
+                trackBar1.Value.ToString()
             );
 
             DialogResult = DialogResult.OK;
@@ -62,6 +66,11 @@ namespace ViseFormi
 
             TimeSpan proteklo = DateTime.Now - pocetno;
             toolStripStatusLabel2.Text = "Proteklo: " + proteklo.Hours.ToString("D2") + ":" + proteklo.Minutes.ToString("D2") + ":" + proteklo.Seconds.ToString("D2");
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            textBoxGodina.Text = trackBar1.Value.ToString();
         }
     }
 }
