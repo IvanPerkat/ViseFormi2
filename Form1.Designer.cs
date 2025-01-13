@@ -59,8 +59,9 @@
             this.buttonChrome = new System.Windows.Forms.Button();
             this.buttonUpišiIzostanak = new System.Windows.Forms.Button();
             this.buttonPrikaziIzostanke = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.statusStripVrijeme.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxOtvori.SuspendLayout();
@@ -320,26 +321,31 @@
             this.buttonPrikaziIzostanke.Text = "Prikaži izostanke";
             this.buttonPrikaziIzostanke.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Promjeni sliku";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(343, 204);
+            this.pictureBox1.Location = new System.Drawing.Point(349, 204);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
             // 
-            // button1
+            // imageList1
             // 
-            this.button1.Location = new System.Drawing.Point(354, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Prikaži sliku";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Snimka zaslona 2025-01-13 120033.png");
+            this.imageList1.Images.SetKeyName(1, "Snimka zaslona 2025-01-13 120136.png");
             // 
             // Form1
             // 
@@ -405,8 +411,9 @@
         private System.Windows.Forms.Button buttonChrome;
         private System.Windows.Forms.Button buttonUpišiIzostanak;
         private System.Windows.Forms.Button buttonPrikaziIzostanke;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

@@ -9,12 +9,14 @@ namespace ViseFormi
     public partial class Form1 : Form
     {
         DateTime pocetno = DateTime.Now;
-        string izostanciFilePath = "C:\\Users\\ucenik\\Downloads";
+        public string izostanciFilePath = "C:\\Users\\ucenik\\Downloads";
+        public int imageIndex = 0;
 
         public Form1()
         {
             InitializeComponent();
             timer1.Tick += timer1_Tick;
+            pictureBox1.Image = imageList1.Images[0];
         }
 
         private void buttonDodaj_Click(object sender, EventArgs e)
@@ -249,7 +251,15 @@ namespace ViseFormi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = true;
+            if (imageIndex % 2 == 0) 
+            {
+                pictureBox1.Image = imageList1.Images[0];
+            }
+            else
+            {
+                pictureBox1.Image = imageList1.Images[1];
+            }
+            imageIndex++;
         }
     }
 }
